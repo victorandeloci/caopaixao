@@ -1,0 +1,130 @@
+/*
+  Theme Name: Cãopaixão
+  Author: Victor Andeloci
+  Version: 1.0.0
+*/
+
+@import 'css/normalize.min.css';
+
+@font-face {
+  font-family: Barlow;
+  src: url(fonts/Barlow-Regular.ttf);
+}
+
+@font-face {
+  font-family: ZenLoop;
+  src: url(fonts/ZenLoop-Regular.ttf);
+}
+
+:root {
+  --backgroundColor: #EEEDF5;
+  --highlightColor: #B30202;
+  --textColor: #1a1a1a;
+  --highlightTextColor: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+  font-family: Barlow;
+}
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ZenLoop;
+  }
+
+  .card {
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+  }
+    .card.banner {
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .card h2 {
+      margin-top: 0;
+    }
+    .card p {
+      margin-bottom: 0;
+    }
+
+  .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  header {
+    margin: 1rem 0;
+  }
+    header nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      header nav .menu {
+        display: flex;
+        padding-left: 0;
+      }
+        header nav .menu .menu-item {
+          list-style: none;
+          margin: 0 1rem;
+        }
+          header nav .menu .menu-item a {
+            text-decoration: none;
+            font-family: ZenLoop;
+            text-transform: uppercase;
+            color: var(--textColor);
+            font-size: 130%;
+            transition-duration: .3s;
+          }
+            header nav .menu .menu-item a:hover {
+              color: var(--highlightTextColor);
+              text-decoration: underline;
+            }
+      header nav .logo-container {
+        display: grid;
+        place-items: center;
+      }
+        header nav .logo-container img {
+          width: 8rem;
+          height: auto;
+          margin: 0 1rem;
+        }
+        header nav .logo-container h2 {
+          text-transform: uppercase;
+          margin: 0;
+          margin-top: .2rem;
+          user-select: none;
+        }
+          header nav .logo-container h2 span {
+            color: var(--highlightColor);
+          }
+
+  #banner {
+    padding: 5rem 0;
+  }
+    #banner .container {
+      display: flex;
+      justify-content: space-between;
+    }
+      #banner .container .card:nth-child(1) {
+        flex-basis: 39%;
+
+      }
+      #banner .container .card:nth-child(2) {
+        flex-basis: 60%;
+      }
