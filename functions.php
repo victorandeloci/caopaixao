@@ -27,8 +27,8 @@ function create_posttype() {
   	// CPT Options
     array(
       'labels' => array(
-        'name' => __( 'Home Content' ),
-        'singular_name' => __( 'Home Content' )
+        'name' => __( 'Home' ),
+        'singular_name' => __( 'Home' )
       ),
       'public' => true,
       'has_archive' => true,

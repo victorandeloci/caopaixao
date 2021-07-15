@@ -7,8 +7,8 @@
 @import 'css/normalize.min.css';
 
 @font-face {
-  font-family: Barlow;
-  src: url(fonts/Barlow-Regular.ttf);
+  font-family: Montserrat;
+  src: url(fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
@@ -37,7 +37,7 @@ html {
 body {
   background-color: var(--backgroundColor);
   color: var(--textColor);
-  font-family: Barlow;
+  font-family: Montserrat;
 }
 
   h1, h2, h3, h4, h5, h6 {
@@ -69,51 +69,59 @@ body {
   }
 
   header {
-    margin: 1rem 0;
+    height: 100vh;
+    position: relative;
   }
-    header nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    header .container {
+      z-index: 2;
+      height: 100%;
+      display: grid;
+      place-items: center;
     }
-      header nav .menu {
+      header nav {
         display: flex;
-        padding-left: 0;
+        align-items: center;
+        justify-content: center;
       }
-        header nav .menu .menu-item {
-          list-style: none;
-          margin: 0 1rem;
+        header nav .menu {
+          display: flex;
+          padding-left: 0;
         }
-          header nav .menu .menu-item a {
-            text-decoration: none;
-            font-family: ZenLoop;
-            text-transform: uppercase;
-            color: var(--textColor);
-            font-size: 130%;
-            transition-duration: .3s;
+          header nav .menu .menu-item {
+            list-style: none;
+            margin: 0 1rem;
           }
-            header nav .menu .menu-item a:hover {
-              color: var(--highlightTextColor);
-              text-decoration: underline;
+            header nav .menu .menu-item a {
+              text-decoration: none;
+              font-family: ZenLoop;
+              text-transform: uppercase;
+              color: var(--textColor);
+              font-size: 175%;
+              transition-duration: .3s;
             }
-      header nav .logo-container {
-        display: grid;
-        place-items: center;
-      }
-        header nav .logo-container img {
-          width: 8rem;
-          height: auto;
-          margin: 0 1rem;
+              header nav .menu .menu-item a:hover {
+                color: var(--highlightTextColor);
+                text-decoration: underline;
+              }
+        header nav .logo-container {
+          display: grid;
+          place-items: center;
         }
-        header nav .logo-container h2 {
-          text-transform: uppercase;
-          margin: 0;
-          margin-top: .2rem;
-          user-select: none;
-        }
-          header nav .logo-container h2 span {
-            color: var(--highlightColor);
+          header nav .logo-container img {
+            width: 15rem;
+            height: auto;
+            margin: 0 1rem;
           }
+          header nav .logo-container h2 {
+            text-transform: uppercase;
+            margin: 0;
+            margin-top: .2rem;
+            user-select: none;
+            font-size: 150%;
+          }
+            header nav .logo-container h2 span {
+              color: var(--highlightColor);
+            }
 
   #about {
     height: 70vh;
@@ -169,3 +177,21 @@ body {
           border-bottom-right-radius: 2rem;
           clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 10% 50%);
         }
+
+  #banner {
+    margin: 5rem 0;
+    height: 70vh;
+    padding: 3rem 0;
+    position: relative;
+  }
+    #banner .thumb {
+      width: 70%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: auto 100%;
+      position: absolute;
+      top: 0;
+      left: -25%;
+      opacity: 0.2;
+    }
