@@ -16,4 +16,12 @@
   <body>
     <header>
       <?php get_template_part('elements/nav'); ?>
+      <div class="decoration">
+        <img src="<?= get_template_directory_uri() ?>/img/paw.svg" alt="Paw decoration">
+        <img src="<?= get_template_directory_uri() ?>/img/paw_red.svg" alt="Paw decoration">
+        <img src="<?= get_template_directory_uri() ?>/img/paw.svg" alt="Paw decoration">
+        <img src="<?= get_template_directory_uri() ?>/img/paw_red.svg" alt="Paw decoration">
+        <img src="<?= get_template_directory_uri() ?>/img/paw.svg" alt="Paw decoration">
+        <img src="<?= get_template_directory_uri() ?>/img/paw.svg" alt="Paw decoration">
+      </div>
     </header>

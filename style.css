@@ -71,7 +71,66 @@ body {
   header {
     height: 100vh;
     position: relative;
+    transition-duration: .5s;
   }
+    header.fix {
+      position: sticky;
+      top: 0;
+      left: 0;
+      height: 20vh;
+      background-color: var(--backgroundColor);
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+    header .decoration {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20rem;
+      height: 20rem;
+      opacity: 0.4;
+    }
+      header.fix .decoration {
+        display: none;
+      }
+      header .decoration img {
+        width: 5rem;
+        height: auto;
+        position: absolute;
+      }
+        header .decoration img:nth-child(1) {
+          width: 8rem;
+          bottom: 5rem;
+          left: 5rem;
+          transform: rotate(45deg);
+        }
+        header .decoration img:nth-child(2) {
+          width: 3rem;
+          bottom: 6.5rem;
+          left: 1rem;
+          transform: rotate(45deg);
+        }
+        header .decoration img:nth-child(3) {
+          bottom: 1rem;
+          left: 1rem;
+          transform: rotate(45deg);
+        }
+        header .decoration img:nth-child(4) {
+          width: 3rem;
+          bottom: 1rem;
+          left: 6.5rem;
+          transform: rotate(45deg);
+        }
+        header .decoration img:nth-child(5) {
+          bottom: 1rem;
+          left: 10rem;
+          transform: rotate(45deg);
+        }
+        header .decoration img:nth-child(6) {
+          bottom: 10rem;
+          left: 1rem;
+          transform: rotate(45deg);
+        }
     header .container {
       z-index: 2;
       height: 100%;
@@ -97,8 +156,11 @@ body {
               text-transform: uppercase;
               color: var(--textColor);
               font-size: 175%;
-              transition-duration: .3s;
+              transition-duration: .5s;
             }
+              header.fix nav .menu .menu-item a {
+                font-size: 130%;
+              }
               header nav .menu .menu-item a:hover {
                 color: var(--highlightTextColor);
                 text-decoration: underline;
@@ -111,14 +173,22 @@ body {
             width: 15rem;
             height: auto;
             margin: 0 1rem;
+            transition-duration: .5s;
           }
+            header.fix nav .logo-container img {
+              width: 8rem;
+            }
           header nav .logo-container h2 {
             text-transform: uppercase;
             margin: 0;
             margin-top: .2rem;
             user-select: none;
             font-size: 150%;
+            transition-duration: .5s;
           }
+            header.fix nav .logo-container h2 {
+              font-size: 115%;
+            }
             header nav .logo-container h2 span {
               color: var(--highlightColor);
             }

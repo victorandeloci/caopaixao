@@ -1,7 +1,7 @@
 <?php
 
-get_header();
+  get_header();
 
-get_template_part('pages/home');
+  get_template_part('pages/home');
 
-get_footer();
+  get_footer();
