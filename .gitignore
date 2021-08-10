@@ -1,0 +1,12 @@
+/log
+/uploads
+/views/blog/wp-admin
+/views/blog/wp-includes
+/views/blog/*.php
+/views/blog/*.html
+/views/blog/*.txt
+/views/blog/wp-content/languages
+/views/blog/wp-content/plugins
+/views/blog/wp-content/uploads
+/views/blog/wp-content/*.php
+/views/blog/wp-content/themes/*.php

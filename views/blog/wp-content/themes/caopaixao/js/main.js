@@ -1,4 +1,5 @@
 const headerTrigger = 100;
+var headerLoaded = false;
 
 function docReady(fn) {
   // see if DOM is already available
@@ -16,10 +17,12 @@ docReady(function() {
 
   if (isHome) {
     window.onscroll = function(ev) {
-      if (window.scrollY >= headerTrigger) {
-        // after trigger Y position on scroll
-        document.querySelector('header').classList.add('fix');
-      }
+      if (!headerLoaded)
+        if (window.scrollY >= headerTrigger) {
+          // after trigger Y position on scroll
+          document.querySelector('header').classList.add('fix');
+          headerLoaded = true;
+        }
     };
   }
 
