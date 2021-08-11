@@ -4,10 +4,13 @@
   <div class="background"></div>
   <div class="container">
     <div class="content">
-      <h2><?= $about->post_title ?></h2>
+      <div class="title">
+        <h2><?= $about->post_title ?></h2>
+        <img src="<?= get_template_directory_uri() ?>/img/title_decoration.svg" alt="">
+      </div>
       <?= $about->post_content ?>
     </div>
-    <div class="thumb-container">
+    <div class="thumb-container" id="3d">
       <img src="<?= get_the_post_thumbnail_url($about) ?>" alt="">
     </div>
   </div>

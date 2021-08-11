@@ -20,7 +20,7 @@
   --backgroundColor: #EEEDF5;
   --highlightColor: #B30202;
   --blue: #00b0ec;
-  --textColor: #1a1a1a;
+  --textColor: #374955;
   --highlightTextColor: #000;
 }
 
@@ -64,7 +64,7 @@ body {
     }
 
   .container {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
   }
 
@@ -208,11 +208,21 @@ body {
         flex-basis: 60%;
         padding-right: 2rem;
       }
-        #about .container .content h2 {
-          font-size: 300%;
+        #about .container .content .title h2 {
+          font-size: 350%;
+          margin-bottom: 0;
+        }
+        #about .container .content .title img {
+          width: 10rem;
+          height: auto;
+          opacity: 0.5;
         }
       #about .container .thumb-container {
+        transition-duration: .3s;
       }
+        #about .container .thumb-container:hover {
+          transform: scale(1.05) rotate(-1deg);
+        }
         #about .container .thumb-container img {
           width: 25rem;
           height: 25rem;
