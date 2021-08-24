@@ -20,6 +20,10 @@
   --backgroundColor: #EEEDF5;
   --highlightColor: #B30202;
   --blue: #00b0ec;
+  --orange: #ff7452;
+  --purple: #5a3f7d;
+  --pink: #ba39ae;
+  --green: #419d00;
   --textColor: #374955;
   --highlightTextColor: #000;
 }
@@ -67,6 +71,21 @@ body {
     width: 80%;
     margin: 0 auto;
   }
+
+  .container .photo-container {
+    transition-duration: .3s;
+  }
+    .container .photo-container:hover {
+      transform: scale(1.05) rotate(-1deg);
+    }
+    .container .photo-container img {
+      width: 25rem;
+      height: 25rem;
+      object-fit: cover;
+      transform: rotate(2deg);
+      border: solid 1rem #fff;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    }
 
   header {
     height: 100vh;
@@ -195,7 +214,6 @@ body {
 
   #about {
     height: 80vh;
-    padding: 5rem 0 3rem 0;
     position: relative;
     background-color: rgba(142, 212, 241, 0.1);
   }
@@ -203,31 +221,162 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      height: 100%;
     }
       #about .container .content {
+        padding: 3rem 0;
         flex-basis: 60%;
-        padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        background-color: var(--backgroundColor);
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+        transition-duration: 2s;
+        border-radius: .5rem;
       }
-        #about .container .content .title h2 {
-          font-size: 350%;
-          margin-bottom: 0;
+        #about.show .container .content {
+          transform: scale(1.05) rotate(-1deg);
         }
-        #about .container .content .title img {
+        #about .container .content .title h2 {
+          font-size: 400%;
+          margin: 0;
+          text-align: center;
+        }
+        #about .container .content img {
           width: 10rem;
           height: auto;
           opacity: 0.5;
+          filter: grayscale(1);
+          transition-duration: 2s;
         }
-      #about .container .thumb-container {
-        transition-duration: .3s;
+          #about.show .container .content img {
+            filter: grayscale(0);
+          }
+        #about .container .content p {
+          text-align: center;
+          width: 60%;
+          line-height: 1.5;
+        }
+    #about .thumb-container {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background-size: 110%;
+      background-position: 0% 15%;
+      background-repeat: no-repeat;
+      box-shadow: inset 5px 5px 30px rgba(0, 0, 0, 0.7);
+      filter: grayscale(1);
+      transition-duration: 2s;
+    }
+      #about.show .thumb-container {
+        filter: grayscale(0);
       }
-        #about .container .thumb-container:hover {
-          transform: scale(1.05) rotate(-1deg);
+
+  #help {
+    padding: 8rem 0;
+  }
+    #help .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      #help .container h2 {
+        font-size: 300%;
+        margin: 0;
+      }
+      #help .container .volunteer {
+        flex-basis: 60%;
+        border: solid 2px var(--blue);
+        border-radius: .5rem;
+        padding: 2rem 5rem;
+        transition-duration: .5s;
+      }
+        #help .container .volunteer h2 {
+          text-align: center;
+          color: var(--blue);
         }
-        #about .container .thumb-container img {
-          width: 25rem;
-          height: 25rem;
-          object-fit: cover;
-          transform: rotate(2deg);
-          border: solid 1rem #fff;
-          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        #help .container .volunteer .content {
+          text-align: center;
         }
+          #help .container .volunteer .content p {
+            line-height: 1.5;
+          }
+        #help .container .volunteer .form-container {
+          padding: 1rem 2rem;
+        }
+          #help .container .volunteer .form-container input,
+          #help .container .volunteer .form-container textarea {
+            width: 100%;
+            font-family: Montserrat;
+            padding: .5rem 0;
+            outline: 0;
+            border: none;
+            background-color: transparent;
+            border-bottom: solid 2px var(--purple);
+            margin-bottom: 1rem;
+            font-size: 95%;
+          }
+            #help .container .volunteer .form-container textarea {
+              height: 8rem;
+            }
+            #help .container .volunteer .form-container input:focus,
+            #help .container .volunteer .form-container textarea:focus {
+              border-bottom-color: var(--blue);
+            }
+          #help .container .volunteer .form-container .action {
+            display: flex;
+            justify-content: flex-end;
+          }
+            #help .container .volunteer .form-container .action button {
+              border: none;
+              border: solid 2px var(--purple);
+              background-color: var(--backgroundColor);
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border-radius: .5rem;
+              padding: .5rem 1rem;
+              width: 8rem;
+              cursor: pointer;
+              color: var(--purple);
+              transition-duration: .3s;
+            }
+              #help .container .volunteer .form-container .action button:hover {
+                border-color: var(--blue);
+                color: var(--blue);
+              }
+              #help .container .volunteer .form-container .action button span {
+                font-size: 100%;
+              }
+      #help .container .how-to-help {
+        flex-basis: 40%;
+        border: solid 2px var(--purple);
+        border-left: none;
+        padding: 2rem;
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        transition-duration: .5s;
+      }
+        #help .container .how-to-help h2 {
+          color: var(--purple);
+        }
+          #help .container .how-to-help .content p {
+            line-height: 1.5;
+          }
+          #help .container .how-to-help .content h3 {
+            font-size: 150%;
+            background-color: var(--purple);
+            width: max-content;
+            padding: .2rem .5rem;
+          }
+            #help .container .how-to-help .content h3 a {
+              color: #fff;
+              text-decoration: none
+            }
+              #help .container .how-to-help .content h3 a:hover {
+                text-decoration: underline;
+              }

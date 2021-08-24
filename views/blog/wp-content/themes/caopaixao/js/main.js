@@ -20,7 +20,10 @@ docReady(function() {
       if (!headerLoaded)
         if (window.scrollY >= headerTrigger) {
           // after trigger Y position on scroll
-          document.querySelector('header').classList.add('fix');
+          if (document.querySelector('header'))
+            document.querySelector('header').classList.add('fix');
+          if (document.querySelector('#about'))
+            document.querySelector('#about').classList.add('show');
           headerLoaded = true;
         }
     };
