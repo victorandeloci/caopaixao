@@ -22,7 +22,7 @@
   --backgroundLighterColor: #f9f8ff;
   --red: #B30202;
   --darkRed: #520000;
-  --blue: #324971;
+  --blue: #477f90;
   --brown: #b97969;
   --textColor: #374955;
   --textLightColor: #677986;
@@ -355,9 +355,12 @@ body {
         border: solid 2px var(--darkRed);
         border-radius: .5rem;
         padding: 2rem 5rem;
-        transition-duration: .5s;
-        background-color: var(--backgroundColor);
+        transition-duration: .3s;
+        background-color: var(--backgroundHintColor);
       }
+        #help .container .volunteer:hover {
+          background-color: var(--backgroundColor);
+        }
         #help .container .volunteer h2 {
           text-align: center;
           color: var(--darkRed);
@@ -396,8 +399,7 @@ body {
           }
             #help .container .volunteer .form-container .action button {
               border: none;
-              border: solid 2px var(--darkRed);
-              background-color: var(--backgroundColor);
+              background-color: rgba(179, 2, 2, 0.7);
               display: flex;
               align-items: center;
               justify-content: space-between;
@@ -405,12 +407,12 @@ body {
               padding: .5rem 1rem;
               width: 8rem;
               cursor: pointer;
-              color: var(--darkRed);
+              color: #fff;
               transition-duration: .3s;
             }
               #help .container .volunteer .form-container .action button:hover {
-                border-color: var(--red);
-                color: var(--red);
+                background-color: var(--red);
+                color: #fff;
               }
               #help .container .volunteer .form-container .action button span {
                 font-size: 100%;
@@ -422,8 +424,12 @@ body {
         padding: 2rem;
         border-top-right-radius: .5rem;
         border-bottom-right-radius: .5rem;
-        transition-duration: .5s;
+        transition-duration: .3s;
+        background-color: var(--backgroundHintColor);
       }
+        #help .container .how-to-help:hover {
+          background-color: var(--backgroundColor);
+        }
         #help .container .how-to-help h2 {
           color: var(--blue);
         }
@@ -443,3 +449,41 @@ body {
               #help .container .how-to-help .content h3 a:hover {
                 text-decoration: underline;
               }
+
+  #social {
+    display: flex;
+  }
+    #social a {
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+
+  footer {
+    background-color: var(--blue);
+  }
+    footer .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+    }
+      footer .container .menu {
+        display: flex;
+        padding-left: 0;
+      }
+        footer .container .menu li {
+          margin: 0 1rem;
+          list-style: none;
+        }
+          footer .container .menu li a {
+            text-decoration: none;
+            color: #ddd;
+            font-family: ZenLoop;
+            text-transform: uppercase;
+            font-size: 120%;
+          }
+            footer .container .menu li a:hover {
+              text-decoration: underline;
+              color: #fff;
+            }
