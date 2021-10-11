@@ -20,7 +20,7 @@ class Api {
         break;
 
       default:
-        echo 'Unregistered action...';
+        $this->default->error();
         break;
     }
   }

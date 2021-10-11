@@ -14,6 +14,6 @@
 
   </head>
   <body>
-    <header class="">
+    <header class="<?= is_home() ? '' : 'fix' ?>">
       <?php get_template_part('elements/nav'); ?>
     </header>
