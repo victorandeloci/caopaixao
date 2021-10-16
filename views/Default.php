@@ -37,4 +37,8 @@ class DefaultView {
   public function error() {
     echo $this->helper->createMessage(false);
   }
+
+  public function contactForm() {
+    echo $this->controller->contactForm();
+  }
 }

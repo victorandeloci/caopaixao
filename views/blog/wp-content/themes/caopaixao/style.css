@@ -28,6 +28,15 @@
   --textLightColor: #677986;
 }
 
+@keyframes loadingRotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -86,6 +95,69 @@ body {
       border: solid 1rem #fff;
       box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
     }
+
+  .form-container {
+    padding: 1rem 2rem;
+  }
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+      width: 100%;
+      font-family: Montserrat;
+      padding: .5rem 0;
+      outline: 0;
+      border: none;
+      background-color: transparent;
+      border-bottom: solid 2px var(--darkRed);
+      margin-bottom: 1rem;
+      font-size: 95%;
+    }
+      .form-container textarea {
+        height: 8rem;
+      }
+      .form-container input:focus,
+      .form-container textarea:focus {
+        border-bottom-color: var(--red);
+      }
+    .form-container .action {
+      display: flex;
+      justify-content: flex-end;
+    }
+      .form-container .action button {
+        border: none;
+        background-color: rgba(179, 2, 2, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+        width: 8rem;
+        cursor: pointer;
+        color: #fff;
+        transition-duration: .3s;
+      }
+        .form-container .action button:hover {
+          background-color: var(--red);
+          color: #fff;
+        }
+        .form-container .action button.done {
+          background-color: rgba(65, 157, 0, 0.7);
+        }
+          .form-container .action button.done:hover {
+            background-color: rgba(65, 157, 0, 0.7);
+          }
+        .form-container .action button::after {
+          font-family: material icons outlined;
+          content: "arrow_forward";
+          font-size: 120%;
+        }
+          .form-container .action button.loading::after {
+            content: "sync";
+            animation: loadingRotate 1s infinite;
+          }
+          .form-container .action button.done::after {
+            content: "done";
+          }
 
   header {
     height: 100vh;
@@ -377,52 +449,6 @@ body {
           #help .container .volunteer .content p {
             line-height: 1.5;
           }
-        #help .container .volunteer .form-container {
-          padding: 1rem 2rem;
-        }
-          #help .container .volunteer .form-container input,
-          #help .container .volunteer .form-container textarea {
-            width: 100%;
-            font-family: Montserrat;
-            padding: .5rem 0;
-            outline: 0;
-            border: none;
-            background-color: transparent;
-            border-bottom: solid 2px var(--darkRed);
-            margin-bottom: 1rem;
-            font-size: 95%;
-          }
-            #help .container .volunteer .form-container textarea {
-              height: 8rem;
-            }
-            #help .container .volunteer .form-container input:focus,
-            #help .container .volunteer .form-container textarea:focus {
-              border-bottom-color: var(--red);
-            }
-          #help .container .volunteer .form-container .action {
-            display: flex;
-            justify-content: flex-end;
-          }
-            #help .container .volunteer .form-container .action button {
-              border: none;
-              background-color: rgba(179, 2, 2, 0.7);
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              border-radius: .5rem;
-              padding: .5rem 1rem;
-              width: 8rem;
-              cursor: pointer;
-              color: #fff;
-              transition-duration: .3s;
-            }
-              #help .container .volunteer .form-container .action button:hover {
-                background-color: var(--red);
-                color: #fff;
-              }
-              #help .container .volunteer .form-container .action button span {
-                font-size: 100%;
-              }
       #help .container .how-to-help {
         flex-basis: 40%;
         border: solid 2px var(--blue);
@@ -549,11 +575,54 @@ body {
         article .container .content img {
           width: 100%;
           height: auto;
+          transition-duration: .3s;
         }
+          article .container .content img:hover {
+            transform: scale(1.02);
+          }
+          #howToHelp article .container .content img {
+            width: 30%;
+            height: auto;
+          }
         article .container .content iframe {
           width: 100%;
           height: 30rem;
         }
+        article .container .content ul {
+          padding: 1rem 0;
+        }
+          article .container .content ul li {
+            list-style: none;
+            display: flex;
+            align-items: start;
+            margin-bottom: 1.5rem;
+          }
+            article .container .content ul li::before {
+              font-family: material icons outlined;
+              content: "chevron_right";
+              font-size: 120%;
+              color: var(--blue);
+              margin-right: .5rem;
+              transition-duration: .3s;
+            }
+
+  #contact .container {
+    width: 70%;
+  }
+    #contact .container .row {
+      display: flex;
+    }
+      #contact .container .row .column {
+        width: 100%;
+      }
+        #contact .container .row .column:first-child {
+          width: 30%;
+          padding-right: 1rem;
+          border-right: solid 2px var(--red);
+        }
+          #contact .container .row .column .content {
+            text-align: right;
+          }
 
   footer {
     background-color: var(--blue);
@@ -565,6 +634,11 @@ body {
       align-items: center;
       padding: 2rem 0;
     }
+      footer .container p {
+        color: #ddd;
+        font-family: ZenLoop;
+        font-size: 120%;
+      }
       footer .container .menu {
         display: flex;
         padding-left: 0;

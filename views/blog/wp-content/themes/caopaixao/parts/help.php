@@ -17,10 +17,10 @@
           <input placeholder="Nome" type="text" name="name" required>
           <input placeholder="E-mail" type="mail" name="email" required>
           <textarea placeholder="Sua mensagem" name="message"></textarea>
+          <input type="hidden" name="annon_edhellen_edro_hi_ammen" value="">
           <div class="action">
             <button type="submit">
               Enviar
-              <span class="material-icons-outlined">arrow_forward</span>
             </button>
           </div>
         </form>

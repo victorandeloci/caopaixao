@@ -2,6 +2,7 @@
       <div class="container">
         <?php wp_nav_menu(array( 'theme_location' => 'footer-menu')); ?>
         <?php get_template_part('elements/social'); ?>
+        <p>CNPJ: 12.363.777/0001-08</p>
       </div>
     </footer>
 

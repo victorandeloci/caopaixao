@@ -19,6 +19,10 @@ class Api {
         $this->default->checkStatus();
         break;
 
+      case 'contactForm':
+        $this->default->contactForm();
+        break;
+
       default:
         $this->default->error();
         break;
