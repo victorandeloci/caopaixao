@@ -310,7 +310,7 @@ body {
       right: 0;
       width: 60%;
       height: 100%;
-      background-size: 110%;
+      background-size: 120%;
       background-position: 0% 15%;
       background-repeat: no-repeat;
       box-shadow: inset 5px 5px 30px rgba(0, 0, 0, 0.7);
@@ -658,3 +658,208 @@ body {
               text-decoration: underline;
               color: #fff;
             }
+
+@media screen and (min-width: 1680px) {
+  .container {
+    width: 80%;
+  }
+  #about .thumb-container {
+    width: 80%;
+    background-position: top center;
+    background-size: cover;
+  }
+  #about .container .content {
+    flex-basis: 50%;
+  }
+  article .container .thumbnail {
+    height: 30rem;
+  }
+  #howToHelp .container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 70%;
+  }
+  #about .container {
+    width: 80%;
+  }
+  #post .container, #page .container {
+    width: 60%;
+  }
+  #contact .container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .container {
+    width: 50%;
+  }
+  #post .container, #page .container {
+    width: 40%;
+  }
+  #contact .container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    width: 90%;
+  }
+  header.fix {
+    height: auto;
+    padding: 1rem 0;
+  }
+    header nav {
+      width: 100%;
+      display: grid;
+      grid-template: auto auto;
+    }
+      header.fix nav {
+        display: flex;
+      }
+      header nav .logo-container {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        margin-bottom: 1rem;
+      }
+        header.fix nav .logo-container {
+          margin-bottom: 0;
+        }
+          header.fix nav .logo-container img {
+            width: 5rem;
+          }
+      header nav > div:first-child {
+        grid-area: 2 / 1;
+      }
+      header nav > div:last-child {
+        grid-area: 2 / 2;
+      }
+  #about .thumb-container {
+    width: 100%;
+    background-size: auto 110%;
+    background-position-x: 0%;
+  }
+  #about .container .content {
+    flex-basis: 55%;
+  }
+  .post-container {
+    flex-wrap: wrap;
+  }
+    .post-container .post {
+      width: 49%;
+      margin-bottom: 1rem;
+    }
+  #help .container {
+    flex-direction: column;
+  }
+    #help .container .how-to-help {
+      width: 85%;
+      border-top: none;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: .5rem;
+      border-left: solid 2px var(--blue);
+    }
+  #post .container, #page .container {
+    width: 90%;
+  }
+  #contact .container .row {
+    flex-direction: column-reverse;
+  }
+    #contact .container .row .column:first-child {
+      width: 60%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+  header.fix nav {
+    flex-direction: row-reverse;
+  }
+  header nav > div:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  header nav > div:last-child {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+    header.fix nav > div:last-child {
+      display: none;
+    }
+  header nav .menu {
+    margin: 0;
+    justify-content: center;
+  }
+  #about {
+    height: 110vh;
+  }
+    #about .thumb-container {
+      background-size: 100%;
+      background-position: top;
+    }
+    #about .container {
+      width: 100%;
+      align-items: flex-end;
+    }
+      #about .container .content {
+        flex-basis: 100%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.5);
+      }
+        #about.show .container .content {
+          transform: none;
+        }
+        #about .container .content p {
+          width: 80%;
+        }
+  .post-container .post {
+    width: 100%;
+  }
+  #help .container .volunteer {
+    padding: 2rem;
+  }
+  footer .container .menu {
+    flex-direction: column;
+  }
+    footer .container .menu li a {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  article .container {
+    padding: 1rem 0;
+  }
+    article .container .content ul li {
+      display: block;
+    }
+    #howToHelp article .container .content img {
+      width: 100%;
+    }
+  #post .post-container .post {
+    width: 100%;
+  }
+  #contact .container {
+    width: 90%;
+  }
+    #contact .container .row .column:first-child {
+      width: 100%;
+      margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+  header.fix nav > div:first-child {
+    display: none;
+  }
+  #about {
+    height: 120vh;
+  }
+  article .container .title .details a {
+    display: none;
+  }
+}

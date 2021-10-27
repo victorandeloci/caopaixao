@@ -1,7 +1,7 @@
 # Cãopaixão
 
 ## Code Credits
-[Husky](https://codepen.io/davidkpiano/pen/wMqXea) by [David Khourshid](https://codepen.io/davidkpiano)
+[Husky](https://codepen.io/davidkpiano/pen/wMqXea) by [David Khourshid](https://codepen.io/davidkpiano)  
 [responsive-html-email-template](https://github.com/leemunroe/responsive-html-email-template)
 
 ## CC Image Credits
@@ -14,4 +14,5 @@
 ["seamless"](https://svgsilh.com/image/1331951.html) is marked with [CC0 1.0](https://creativecommons.org/licenses/cc0/1.0/?ref=ccsearch&atype=rich)
 ["Pet Dog"](https://www.flickr.com/photos/96964826@N05/16540146562) by [sonstroem](https://www.flickr.com/photos/96964826@N05) is licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich)  
 ["Happy Dog and Jolly Egg"](https://www.flickr.com/photos/96964826@N05/8954700746) by [sonstroem](https://www.flickr.com/photos/96964826@N05) is licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich)  
-["Dog Toy Bliss"](https://www.flickr.com/photos/96964826@N05/29961307572) by [sonstroem](https://www.flickr.com/photos/96964826@N05) is licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich)
+["Dog Toy Bliss"](https://www.flickr.com/photos/96964826@N05/29961307572) by [sonstroem](https://www.flickr.com/photos/96964826@N05) is licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich)  
+["Happy Dog!"](https://www.flickr.com/photos/10555998@N08/3919415913) by [orre](https://www.flickr.com/photos/10555998@N08) is licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=rich)
